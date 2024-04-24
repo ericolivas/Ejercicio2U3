@@ -76,11 +76,9 @@ void *mainThread(void *arg0)
     /************************************************
         CONFIGURACION DE GPIO
      ************************************************/
-    GPIO_setPinEntradaconPullUp(PUERTO1, BOTON1 | BOTON2);                 //PIN P1.4 Y PIN P1.1 COMO ENTRADA
-    GPIO_setPinSalida(PUERTO1, LED);                          // Set P1.0 COMO SALIDA  "ESTO UTILIZA EL DRIVER DECLARADO EN BSP.h"
-    GPIO_setPinBajo(PUERTO1, LED);                              // APAGADO
-    GPIO_setPinSalida(PUERTO2, LEDROJO | LEDVERDE | LEDAZUL);   // CONFIGURA PINES 2.0,2.1,2.2  COMO SALIDA (LEDS RGB)"
-    GPIO_setPinBajo(PUERTO2, LEDROJO | LEDVERDE | LEDAZUL);      // APAGADOS
+    //Actividad 9
+    Actividad_9();
+
     while (1)
     {
         if ( Gpio_Pin_in(BOTON1) != 1)                            // ENTRA AL PRESIONAR EL SWITCH DEL PUERTO P1.1 (CUANDO ESTA EN BAJO)

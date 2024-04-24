@@ -78,7 +78,22 @@ uint8_t Gpio_Pin_in_P2( uint_fast16_t pin_)
         return (0x00);
 }
 
-
+/******************************************************************************
+ * Function: Actividad_9
+ * Preconditions: None.
+ * Overview: Configura el Pin(es) del Puerto seleccionado como salida.
+ * Input: None.
+ * Output: None.
+ *
+ *****************************************************************************/
+void Actividad_9()
+{
+    GPIO_setPinEntradaconPullUp(PUERTO1, BOTON1 | BOTON2);                 //PIN P1.4 Y PIN P1.1 COMO ENTRADA
+    GPIO_setPinSalida(PUERTO1, LED);                          // Set P1.0 COMO SALIDA  "ESTO UTILIZA EL DRIVER DECLARADO EN BSP.h"
+    GPIO_setPinBajo(PUERTO1, LED);                              // APAGADO
+    GPIO_setPinSalida(PUERTO2, LEDROJO | LEDVERDE | LEDAZUL);   // CONFIGURA PINES 2.0,2.1,2.2  COMO SALIDA (LEDS RGB)"
+    GPIO_setPinBajo(PUERTO2, LEDROJO | LEDVERDE | LEDAZUL);      // APAGADOS
+}
 /******************************************************************************
  * Function: GPIO_setPinSalida
  * Preconditions: None.
