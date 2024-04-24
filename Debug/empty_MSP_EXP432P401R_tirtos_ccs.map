@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Tue Apr 23 14:52:39 2024
+>> Linked Wed Apr 24 09:41:12 2024
 
 OUTPUT FILE NAME:   <empty_MSP_EXP432P401R_tirtos_ccs.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 000029a9
